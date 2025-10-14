@@ -1,0 +1,227 @@
+@import url("./components/header.css");
+@import url("./components/section-title.css");
+@import url("./components/shortcut-button.css");
+@import url("./components/voucher-item.css");
+@import url("./components/product-card.css");
+@import url("./components/category-item.css");
+
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica";
+}
+
+/* Section wrapper */
+#voucher_area,
+#best_sellers,
+#recommend_combo {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  gap: 16px;
+}
+
+/* Products */
+#voucher_list,
+#product_list,
+#combo_list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  gap: 16px;
+  padding-left: 16px;
+}
+
+#voucher_list {
+  gap: 12px;
+}
+
+/* Body intro */
+#intro_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  padding: 24px 16px 16px;
+}
+
+#intro_wrapper h1 {
+  font-weight: 700;
+  font-style: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+}
+
+#intro_wrapper p {
+  font-weight: 400;
+  font-style: regular;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+}
+
+/* Slider */
+#slider_container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#slider_wrapper {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Cuộn dính từng ảnh */
+  scroll-behavior: smooth; /* Cuộn mượt */
+  -webkit-overflow-scrolling: touch; /* Cuộn mượt trên mobile */
+}
+
+.slider_img {
+  flex: 0 0 100%; /* mỗi ảnh chiếm toàn bộ chiều ngang */
+  height: auto;
+  object-fit: cover;
+  scroll-snap-align: start;
+  flex-shrink: 0; /* Ngăn co ảnh lại */
+}
+
+/* Slider indicator dots */
+#slider_dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+#slider_dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+#slider_dots .active {
+  width: 7px;
+  height: 7px;
+  border: none;
+  background-color: #fff;
+}
+
+/* Actions */
+#action_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  gap: 8px;
+}
+
+#search_bar {
+  position: relative;
+  width: 254px;
+}
+
+#search_bar input {
+  width: 100%;
+  height: 64px;
+  font-size: 16px;
+  padding: 16px 16px 16px 50px;
+  background-color: #f2f2f2;
+  border-radius: 16px;
+  border: none;
+}
+
+#search_bar img {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+.action_btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  border: none;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.action_btn img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Short cuts */
+#shortcut_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+/* Cateogries */
+#category_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Keep reading */
+#scroll_for_keep_reading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 72px;
+  padding: 16px 0;
+  background-color: #fff;
+  border-top: 1px solid #f2f2f2;
+  position: relative;
+  overflow: hidden;
+}
+
+#scroll_for_keep_reading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to top, #e5d2bf, transparent);
+  pointer-events: none;
+}
+
+#scroll_for_keep_reading p {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+#scroll_for_keep_reading img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}

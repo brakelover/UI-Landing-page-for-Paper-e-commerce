@@ -1,0 +1,27 @@
+/* Short cuts */
+
+.shortcut_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 8px 0;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.shortcut_btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.shortcut_btn span {
+  font-size: 12px;
+  font-weight: bold;
+  font-style: regular;
+}

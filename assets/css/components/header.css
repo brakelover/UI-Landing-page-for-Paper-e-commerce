@@ -1,0 +1,17 @@
+/* Header */
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+#header img {
+  width: 100%;
+  height: auto;
+}
